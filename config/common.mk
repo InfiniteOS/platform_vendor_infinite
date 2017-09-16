@@ -15,7 +15,11 @@ include vendor/infinite/config/aosp_fixes.mk
 PRODUCT_COPY_FILES += \
 #		$(LOCAL_PATH)/media/bootanimation.zip:system/media/bootanimation.zip
 		vendor/infinite/prebuilt/bin/sysinit:system/bin/sysinit \
-		vendor/infinite/prebuilt/etc/init.infinite.rc:root/init.infinite.rc
+		vendor/infinite/prebuilt/etc/init.infinite.rc:root/init.infinite.rc \
+		#backuptool
+		vendor/infinite/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
+		vendor/infinite/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
+		vendor/infinite/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh
 
 #Include Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
