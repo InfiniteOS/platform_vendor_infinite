@@ -11,9 +11,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 include vendor/infinite/config/aosp_fixes.mk
 
-#BootAnimation
-#PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
 #		$(LOCAL_PATH)/media/bootanimation.zip:system/media/bootanimation.zip
+		vendor/infinite/prebuilt/bin/sysinit:system/bin/sysinit
+		vendor/infinite/prebuilt/etc/init.infinite.rc:root/init.infinite.rc
 
 #Include Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
