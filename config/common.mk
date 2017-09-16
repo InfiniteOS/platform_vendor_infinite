@@ -6,7 +6,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 		ro.facelock.rec_timeout=2500 \
 		ro.facelock.lively_timeout=2500 \
 		ro.facelock.est_max_time=600 \
-		ro.build.selinux=1
+		ro.build.selinux=1 \
+		net.tethering.noprovisioning=true
 
 include vendor/infinite/config/aosp_fixes.mk
 
