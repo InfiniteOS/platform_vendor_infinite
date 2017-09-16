@@ -25,4 +25,5 @@ PRODUCT_PACKAGES += \
 		Launcher3 \
 		LiveWallpapersPicker \
 		Stk \
-	 	CellBroadcastReceiver
+	 	CellBroadcastReceiver \
+		libprotobuf-cpp-full
