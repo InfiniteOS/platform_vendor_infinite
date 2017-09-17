@@ -33,8 +33,6 @@ PRODUCT_PACKAGES += \
 	 	CellBroadcastReceiver \
 		libprotobuf-cpp-full
 
-export ANDROID_VERSION=8.0.0
-
 ifeq ($(KBUILD_BUILD_USER),PlaceHolder)
 		ifeq ($(KBUILD_BUILD_HOST),Europa)
 				INF_BUILD_TYPE := OFFICIAL
@@ -46,4 +44,4 @@ ifndef INF_BUILD_TYPE
 		INF_BUILD_TYPE := UNOFFICIAL
 endif
 
-INF_VERSION := InfiniteOS_$(PRODUCT_MODEL)_$(ANDROID_VERSION)_$(shell date +%m%d%Y)_$(INF_BUILD_TYPE)
+INF_VERSION := InfiniteOS_$(PRODUCT_MODEL)_$(PLATFORM_VERSION)_$(shell date +%m%d%Y)_$(INF_BUILD_TYPE)
