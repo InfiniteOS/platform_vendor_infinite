@@ -39,8 +39,10 @@ ifeq ($(KBUILD_BUILD_USER),PlaceHolder)
 		endif
 endif
 
-ifeq ($(USE_GAPPS),true)
-		include vendor/gapps/stock_gapps.mk
+ifeq ($(TARGET_ARCH),arm64)
+	ifeq ($(USE_GAPPS),true)
+			include vendor/gapps/stock_gapps.mk
+	endif
 endif
 
 ifeq ($(USE_DEXPORT),false)
