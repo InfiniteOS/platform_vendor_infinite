@@ -39,6 +39,14 @@ ifeq ($(KBUILD_BUILD_USER),PlaceHolder)
 		endif
 endif
 
+ifeq ($(USE_GAPPS),true)
+		include vendor/gapps/stock_gapps.mk
+endif
+
+ifeq ($(USE_DEXPORT),false)
+		WITH_DEXPORT = false
+endif
+
 #InfiniteOS system versioning
 ifndef INF_BUILD_TYPE
 		INF_BUILD_TYPE := UNOFFICIAL
