@@ -45,13 +45,13 @@ ifeq ($(TARGET_ARCH),arm64)
 	endif
 endif
 
-ifeq ($(USE_DEXPORT),false)
-		WITH_DEXPORT = false
-endif
-
 #InfiniteOS system versioning
 ifndef INF_BUILD_TYPE
 		INF_BUILD_TYPE := UNOFFICIAL
 endif
 
-INF_VERSION := InfiniteOS_$(PRODUCT_MODEL)_$(PLATFORM_VERSION)_$(shell date +%m%d%Y)_$(INF_BUILD_TYPE)
+ifeq ($(INF_BUILD_TYPE),UNOFFICIAL)
+		WITH_DEXPORT = false
+endif
+
+INF_VERSION := InfiniteOS_$(PRODUCT_DEVICE)_$(PLATFORM_VERSION)_$(shell date +%m%d%Y)_$(INF_BUILD_TYPE)
