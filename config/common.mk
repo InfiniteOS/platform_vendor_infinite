@@ -8,7 +8,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 		ro.facelock.est_max_time=600 \
 		ro.build.selinux=1 \
 		net.tethering.noprovisioning=true \
-		ro.infinite.version=$(INF_VERSION)
+		ro.infinite.version=$(INF_VERSION) \
+		ro.infinite.device=$(PRODUCT_DEVICE)
 
 include vendor/infinite/config/aosp_fixes.mk
 
