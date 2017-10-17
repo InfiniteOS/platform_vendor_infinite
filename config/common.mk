@@ -34,7 +34,7 @@ PRODUCT_PACKAGES += \
 	 	CellBroadcastReceiver \
 		libprotobuf-cpp-full
 
-ifeq ($(KBUILD_BUILD_USER),PlaceHolder)
+ifeq ($(KBUILD_BUILD_USER),Titan)
 		ifeq ($(KBUILD_BUILD_HOST),Europa)
 				INF_BUILD_TYPE := OFFICIAL
 		endif
